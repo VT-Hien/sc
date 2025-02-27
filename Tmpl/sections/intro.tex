@@ -1,0 +1,99 @@
+\section{Introduction}
+
+\subsection{Dysarthria}
+
+\begin{frame}{What is Dysarthria?}
+    \begin{itemize}
+        \item \textbf{Dysarthria} is a motor speech disorder caused by damage to the nervous system.
+        \item It affects the muscles that control speech, leading to slurred or unclear speech.
+        \item It does not impact intelligence but can create significant communication challenges.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Symptoms of Dysarthria}
+    \begin{itemize}
+        \item Slurred speech, weak voice, or inability to control volume.
+        \item Speaking too fast or too slow, difficulty regulating speech rhythm.
+        \item Difficulty swallowing, increased risk of choking while eating.
+    \end{itemize}
+   
+
+\end{frame}
+
+\begin{frame}{Prevalence of Dysarthria}
+    \begin{itemize}
+        \item Around 25\% of stroke patients exhibit symptoms of Dysarthria.
+        \item In Parkinson’s disease, about 70\% - 80\% of patients experience speech disorders.
+    \end{itemize}
+     \begin{table}[]
+    \centering
+    \begin{tabular}{l c}
+        \toprule
+        Patient Group & Prevalence of Dysarthria \\
+        \midrule
+        Stroke & 25\% \\
+        Parkinson’s disease & 70\% - 80\% \\
+        Traumatic brain injury & 50\% \\
+        ALS (Amyotrophic Lateral Sclerosis) & 90\% \\
+        Cerebral palsy & 50\% - 60\% \\
+        \bottomrule
+    \end{tabular}
+    \caption{Prevalence of Dysarthria by Patient Group}
+\end{table}
+\end{frame}
+
+\begin{frame}{Geographical Distribution of Dysarthria}
+    \begin{itemize}
+        \item Dysarthria affects approximately 2\% - 3\% of the global population.
+        \item In developed countries (USA, Canada, Europe), Dysarthria is more common due to longer life expectancy and a higher incidence of neurodegenerative diseases.
+        \item In developing countries, Dysarthria is underdiagnosed due to limited healthcare infrastructure.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Diagnosis Methods}
+        \begin{itemize}
+            \item Speech assessment and neurological examination.
+            \item MRI and CT scan to identify brain damage.
+        \end{itemize}
+\end{frame}
+\subsection{MFCC}
+
+
+\begin{frame}
+    \frametitle{What is MFCC?}
+    \begin{itemize}
+        \item MFCC (Mel-frequency Cepstral Coefficients) is a set of feature coefficients extracted from audio signals.
+        \item Based on the Mel scale, mimicking how the human ear perceives sound frequencies.
+        \item Applications: Speech recognition, audio classification, emotion analysis.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{MFCC Computation Process - Overview}
+    \begin{itemize}
+        \item The MFCC extraction process consists of 7 main steps.
+        \item Goal: Convert audio signals into compact feature coefficients.
+        \item Steps are performed sequentially on each signal frame.
+    \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{MFCC Computation Process}
+    \begin{enumerate}
+        \item \textbf{Pre-emphasis:} Enhances high frequencies to balance the spectrum. Formula: \( y(n) = x(n) - 0.97 x(n-1) \).
+        \item \textbf{Framing:} Divides the signal into short frames (20-40ms) with overlap.
+        \item \textbf{Windowing:} Applies a Hamming window to reduce edge effects.
+        \item \textbf{Fast Fourier Transform (FFT):} Converts the signal to the frequency domain, yielding the power spectrum.
+    \end{enumerate}
+\end{frame}
+
+% Frame 2: Steps 5-7
+\begin{frame}
+    \frametitle{MFCC Computation Process}
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item \textbf{Mel Filterbank:} Applies triangular filters on the Mel scale: $$ m(f) = 2595 \log_{10}(1 + \frac{f}{700}) $$.
+        \item \textbf{Logarithm:} Compresses filterbank energies with $$ \log S_m $$.
+        \item \textbf{Discrete Cosine Transform (DCT):} Produces MFCC coefficients, typically keeping 12-13. Formula: \( c_n = \sum \log S_m \cos\left(\frac{\pi n (m-0.5)}{M}\right) \).
+    \end{enumerate}
+\end{frame}
+

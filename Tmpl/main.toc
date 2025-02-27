@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Dysarthria}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{MFCC}{8}{0}{1}
+\beamer@sectionintoc {2}{Related Works}{12}{0}{2}
+\beamer@sectionintoc {3}{Experiments}{12}{0}{3}
+\beamer@subsectionintoc {3}{1}{Dataset}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Baseline}{18}{0}{3}
+\beamer@sectionintoc {4}{Exemplos com texto}{19}{0}{4}
+\beamer@sectionintoc {5}{Exemplos com equações e imagens}{22}{0}{5}
+\beamer@sectionintoc {6}{Exemplos com código}{25}{0}{6}
+\beamer@sectionintoc {7}{Conclusão}{30}{0}{7}
